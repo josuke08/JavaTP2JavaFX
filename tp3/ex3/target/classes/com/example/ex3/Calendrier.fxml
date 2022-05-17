@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<?import javafx.scene.control.skin.TabPaneSkin.TabControlButtons?>
+<?import javafx.collections.FXCollections?>
+<?import com.example.ex3.Week?>
+<GridPane alignment="CENTER" hgap="10.0" vgap="10.0"
+          xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="com.example.ex3.Calendrier">
+        <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+        </padding>
+        <Label style="-fx-font: NORMAL 20 Tahoma;" text="Calendrier"
+               GridPane.columnIndex="0" GridPane.rowIndex="0">
+        </Label>
+        <Label fx:id="date" GridPane.columnIndex="0" GridPane.rowIndex="1"></Label>
+        <TextField onAction="#changeCalendar" fx:id="month" maxWidth="50" promptText="Month" prefWidth="50" GridPane.columnIndex="0" GridPane.rowIndex="2"></TextField>
+        <TextField onAction="#changeCalendar" fx:id="year" maxWidth="50" promptText="Year" prefWidth="50" GridPane.columnIndex="0" GridPane.rowIndex="3"></TextField>
+
+        <TableView fx:id="tableView" GridPane.columnIndex="0"
+                   GridPane.rowIndex="4">
+
+            <columns>
+                <TableColumn fx:id="monthYear">
+                    <columns>
+                        <TableColumn text="Dimanche">
+                            <cellValueFactory><PropertyValueFactory property="dim" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Lundi">
+                            <cellValueFactory><PropertyValueFactory property="lun" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Mardi">
+                            <cellValueFactory><PropertyValueFactory property="mar" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Mercredi">
+                            <cellValueFactory><PropertyValueFactory property="mer" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Jeudi">
+                            <cellValueFactory><PropertyValueFactory property="jeu" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Vendredi">
+                            <cellValueFactory><PropertyValueFactory property="ven" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Samedi">
+                            <cellValueFactory><PropertyValueFactory property="sam" />
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                </TableColumn>
+            </columns>
+
+        </TableView>
+</GridPane>
+<!--    <GridPane
+        fx:id="calendar"
+        hgap="15" vgap="15"
+        xmlns:fx="http://javafx.com/fxml/1"
+              fx:controller="com.example.ex3.Calendrier">
+        <Label text="Dimanche" GridPane.columnIndex="0" GridPane.rowIndex="3"></Label>
+        <Label text="Lundi" GridPane.columnIndex="1" GridPane.rowIndex="3"></Label>
+        <Label text="Mardi" GridPane.columnIndex="2" GridPane.rowIndex="3"></Label>
+        <Label text="Mercredi" GridPane.columnIndex="3" GridPane.rowIndex="3"></Label>
+        <Label text="Jeudi" GridPane.columnIndex="4" GridPane.rowIndex="3"></Label>
+        <Label text="Vendredi" GridPane.columnIndex="5" GridPane.rowIndex="3"></Label>
+        <Label text="Samedi" GridPane.columnIndex="6" GridPane.rowIndex="3"></Label>
+
+    </GridPane>
+-->

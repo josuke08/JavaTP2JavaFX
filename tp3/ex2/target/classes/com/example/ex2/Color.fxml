@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.control.skin.ColorPalette.ColorSquare?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.ex2.Color">
+    <top>
+        <Label textAlignment="center">Choisissez votre carré</Label>
+    </top>
+    <center>
+
+        <Circle fx:id="circle" radius="100" ></Circle>
+
+    </center>
+    <bottom>
+        <VBox>
+        <ListView fx:id="choices" onMouseClicked="#changeColor" orientation="HORIZONTAL" maxHeight="60">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <Rectangle fill="khaki" height="45" width="45"></Rectangle>
+                    <Rectangle fill="dodgerblue" height="45" width="45"></Rectangle>
+                    <Rectangle fill="green" height="45" width="45"></Rectangle>
+                    <Rectangle fill="yellow" height="45" width="45"></Rectangle>
+                    <Rectangle fill="red" height="45" width="45"></Rectangle>
+                    <Rectangle fill="mediumpurple" height="45" width="45"></Rectangle>
+                    <Rectangle fill="pink" height="45" width="45"></Rectangle>
+                    <Rectangle fill="orange" height="45" width="45"></Rectangle>
+                    <Rectangle fill="cyan" height="45" width="45"></Rectangle>
+                    <Rectangle fill="saddlebrown" height="45" width="45"></Rectangle>
+                </FXCollections>
+            </items>
+        </ListView>
+        <HBox alignment="CENTER" spacing="10">
+            <Button text="Aller à gauche" onMouseClicked="#left"></Button>
+            <Button text="Aller à droite" onMouseClicked="#right"></Button>
+            <Button text="Quitter" onMouseClicked="#quit"></Button>
+        </HBox>
+
+        </VBox>
+    </bottom>
+
+</BorderPane>

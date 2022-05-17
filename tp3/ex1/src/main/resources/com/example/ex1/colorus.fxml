@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.ex1.Police">
+    <top>
+        <HBox spacing="10">
+            <VBox spacing="10">
+                <TextField text="Controle 2 Java P.O.O" fx:id="text"></TextField>
+                <TextField text="30" fx:id="size"></TextField>
+            </VBox>
+        <ListView fx:id="police" maxHeight="100">
+            <items>
+                <FXCollections fx:factory="observableArrayList" fx:id="list">
+                    <String fx:value="SansSerif" />
+                    <String fx:value="Serif"/>
+                    <String fx:value="Monospaced" />
+                    <String fx:value="DialogInput"/>
+                    <String fx:value="Dialog" />
+                </FXCollections>
+            </items>
+        </ListView>
+        </HBox>
+    </top>
+    <center>
+       <Button text="Valider" onAction="#addSubject"></Button>
+    </center>
+</BorderPane>
+
